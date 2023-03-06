@@ -1,0 +1,16 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "tag": "shoe"
+        },
+        {
+            "id": 2,
+            "tag": "trouser"
+        },
+        {
+            "id": 3,
+            "tag": "shirt"
+        }
+    ]
+}

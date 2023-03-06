@@ -1,21 +1,15 @@
-import { useEffect, useState } from 'react';
-import CategoryMenu from "./components/category-menu/CategoryMenu"
 import { Route, Routes } from 'react-router-dom';
-
+import HomePage from './routes/home/HomePage';
+import Menu from './routes/menu/Menu';
+import './App.css';
 
 const App = () => {
-  const [categoryList, setCategories] = useState([]);
-
-  useEffect(() => {
-    fetch('./categories.json')
-    .then((res) => res.json())
-    .then((data) => setCategories(data.categories));
-  }, []);
 
   console.log('test');
   return <>
+    <Menu />
     <Routes>
-      <Route path="/" element = {<CategoryMenu categories={categoryList}/>} />
+      <Route path="/" element = {<HomePage />} />
     </Routes>
   </> 
 };

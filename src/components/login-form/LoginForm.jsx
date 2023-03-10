@@ -1,13 +1,19 @@
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
+import TextInput from "../text-input/TextInput";
 import "./styles.css";
 
 const LoginForm = () => {
-    const [errorMessages, setErrorMessages] = useState({});
+    // const [errorMessages, setErrorMessages] = useState({message: "nah"});
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleSubmit = async (event) => {
+    console.log("test from login form");
+    const usernameRef = useRef();
+    const passwordRef = useRef();
+
+    const handleSubmit = useCallback(async (event) => {
         //Prevent page reload
         event.preventDefault();
+        console.log(usernameRef.current.value);
 
         // Find user login info
         const res = await fetch("./token.json");
@@ -19,26 +25,29 @@ const LoginForm = () => {
         } else {
             setErrorMessages({ name: "error"});
         }
-    };
+    }, []);
 
-    const renderErrorMessage = (name) =>
-        name === errorMessages.name && (
-            <div className="error">{errorMessages.message}</div>
-        );
+    // const renderErrorMessage = (name) =>
+    //     name === errorMessages.name &&
+    //     (<div className="error">{errorMessages.message}</div>)
 
     const renderForm = (
         <div className="form">
             <form onSubmit={handleSubmit}>
-                <div className="input-container">
-                    <label>Username </label>
-                    <input type="text" name="uname" required />
-                    {renderErrorMessage("error")}
-                </div>
-                <div className="input-container">
-                    <label>Password </label>
-                    <input type="password" name="pass" required />
-                    {renderErrorMessage("ror")}
-                </div>
+                <TextInput 
+                        className="input-container" 
+                        label="Username" 
+                        type="text" 
+                        name="uname" required 
+                        ref={usernameRef}
+                        autoComplete="on"/>
+                <TextInput 
+                        className="input-container" 
+                        label="Password"
+                        type="password" 
+                        name="pass" required 
+                        ref={passwordRef}
+                        autoComplete="on"/>
                 <div className="button-container">
                     <input type="submit" />
                 </div>

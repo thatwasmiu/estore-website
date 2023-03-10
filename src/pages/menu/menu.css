@@ -1,13 +1,10 @@
-#menu {
+.navigation-bar {
     position: fixed;
     left: 0;
     top: 0;
-    height: 100px;
-    width: 100%;
-    background: #ccc;
 }
 
-#menu a {
+.navigation-bar a {
     display: block;
     padding: 15px;
     margin: 15px 0;
@@ -18,7 +15,7 @@
     box-shadow: 0 8px #ffcc66;
 }
 
-#menu a:hover, #menu a.active {
+.navigation-bar a:hover, .navigation-bar a.active {
     background: #66ccff;
     color: white;
     box-shadow: 0 8px #00aaff;

@@ -1,7 +1,8 @@
 .navigation-bar {
-    position: fixed;
+    /* position: fixed;
     left: 0;
-    top: 0;
+    top: 0; */
+    display: flex;
 }
 
 .navigation-bar a {

@@ -1,14 +1,15 @@
 import {NavLink, Outlet} from "react-router-dom";
 import './menu.css';
 
-const Menu = () => {
+const NavBar = () => {
     return <>
         <nav className="navigation-bar">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/login">Login</NavLink>
+            <NavLink to="/test">Test</NavLink>
         </nav>
-        {/*<Outlet />*/}
+        <Outlet />
     </>
 }
 
-export default Menu;
+export default NavBar;

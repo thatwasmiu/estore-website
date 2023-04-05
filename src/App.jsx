@@ -1,23 +1,24 @@
-import { Route, Routes } from 'react-router-dom';
-import HomePage from './pages/home/HomePage';
-import './App.css';
-import LoginPage from "./pages/login-form/LoginPage.jsx";
-import Test from "./pages/test-route/Test.jsx";
-import NavBar from './pages/nav-bar/NavBar';
+import { Routes, Route } from "react-router-dom"
+import { Container } from "react-bootstrap"
+import { Home } from "./pages/Home"
+import { Store } from "./pages/Store"
+import { About } from "./pages/About"
+import { Navbar } from "./components/Navbar"
+import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 
+function App() {
+  return (
+    <ShoppingCartProvider>
+      <Navbar />
+      <Container className="mb-4">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Container>
+    </ShoppingCartProvider>
+  )
+}
 
-const App = () => {
-
-  console.log('test');
-  return <>
-    <Routes>
-      <Route path='/' element={<NavBar />}>
-        <Route index element = {<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Route>
-        <Route path="/test" element={<Test />} />
-    </Routes>
-  </> 
-};
-
-export default App;
+export default App

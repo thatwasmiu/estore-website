@@ -5,8 +5,8 @@ const NavDropdownMenu = (expanded) => {
     
     return (
             <>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <div className="nav-dropdown-menu">
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ml-auto">
                             {expanded && <NavDropdown className="dropdown-menu-cust">

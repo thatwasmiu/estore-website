@@ -3,10 +3,12 @@ import { Container } from "react-bootstrap"
 import { Home } from "./pages/Home"
 import { Store } from "./pages/Store"
 import { About } from "./pages/About"
-import { Navbar } from "./components/NavBar"
+import { Navbar } from "./components/navbar/Navbar"
 import { QueryClientProvider, QueryClient } from "react-query"
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 import LoginPage from "./pages/login-page/LoginPage"
+import CartButton from "./components/cart-button/CartButton"
+
 
 function App() {
   const queryClient = new QueryClient()
@@ -22,6 +24,7 @@ function App() {
             <Route path="/about" element={<About />} />
           </Routes>
         </Container>
+        <CartButton />
       </ShoppingCartProvider>
     </QueryClientProvider>
   )

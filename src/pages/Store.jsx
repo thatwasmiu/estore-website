@@ -1,8 +1,32 @@
 import { Col, Row } from "react-bootstrap"
 import { StoreItem } from "../components/StoreItem"
-import storeItems from "../data/items.json"
+import { useQuery } from "react-query";
+import { useState, useEffect } from "react";
+// import storeItems from "../data/items.json"
 
 export function Store() {
+
+  // const { isLoading, error, data } = useQuery('CartItemKey', () =>
+  //   fetch('./items.json').then(res => {
+  //     console.log('test')
+  //     return res.json()
+  //   }
+      
+  //   )
+  // );
+
+  // console.log(data);
+
+  // if (isLoading) return 'Loading.................';
+
+  const [storeItems, setCategories] = useState([]);
+  useEffect(() => {
+    fetch('./items.json')
+    .then((res) => res.json())
+    .then((d) => setCategories(d));
+  }, []);
+
+  // const storeItems = data;
   return (
     <>
       <h1>Store</h1>
@@ -16,3 +40,5 @@ export function Store() {
     </>
   )
 }
+
+

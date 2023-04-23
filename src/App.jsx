@@ -3,21 +3,27 @@ import { Container } from "react-bootstrap"
 import { Home } from "./pages/Home"
 import { Store } from "./pages/Store"
 import { About } from "./pages/About"
-import { Navbar } from "./components/Navbar"
+import { Navbar } from "./components/NavBar"
+import { QueryClientProvider, QueryClient } from "react-query"
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
+import LoginPage from "./pages/login-page/LoginPage"
 
 function App() {
+  const queryClient = new QueryClient()
   return (
-    <ShoppingCartProvider>
-      <Navbar />
-      <Container className="mb-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </Container>
-    </ShoppingCartProvider>
+    <QueryClientProvider client={queryClient}>
+      <ShoppingCartProvider>
+        <Navbar />
+        <Container className="mb-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/store" element={<Store />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </Container>
+      </ShoppingCartProvider>
+    </QueryClientProvider>
   )
 }
 

@@ -1,0 +1,9 @@
+.nav-dropdown-menu {
+    position: relative;
+    margin-left: 80%;
+}
+.dropdown-menu {
+    position: absolute;
+    right: 5000px;
+    left: auto;
+}

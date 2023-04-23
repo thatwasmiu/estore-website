@@ -1,11 +1,19 @@
-import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap"
+import { Button, Container, Nav, NavDropdown, Navbar as NavbarBs } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
 import { useShoppingCart } from "../context/ShoppingCartContext"
+import { useState } from "react"
+import NavDropdownMenu from "./nav-dropdown/NavDropdown.component"
 
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart()
+  const [expanded, setExpanded] = useState(false)
+
+    const setToggle = () => {
+        console.log('toggle');
+        setExpanded(true)
+    }
   return (
-    <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
+    <NavbarBs sticky="top" className="bg-white shadow-sm mb-3" onToggle={setToggle}>
       <Container>
         <Nav className="me-auto">
           <Nav.Link to="/" as={NavLink}>
@@ -17,8 +25,7 @@ export function Navbar() {
           <Nav.Link to="/about" as={NavLink}>
             About
           </Nav.Link>
-        </Nav>
-        {cartQuantity > 0 && (
+          {cartQuantity > 0 && (
           <Button
             onClick={openCart}
             style={{ width: "3rem", height: "3rem", position: "relative" }}
@@ -49,7 +56,11 @@ export function Navbar() {
             </div>
           </Button>
         )}
+        </Nav>
+        <NavDropdownMenu expanded={expanded} />
       </Container>
     </NavbarBs>
   )
 }
+
+

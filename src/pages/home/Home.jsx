@@ -1,8 +1,12 @@
 import { useEffect } from "react"
-import CarouselSlide from "../components/carousel-slide/CarouselSlide.componet";
+import CarouselSlide from "../../components/carousel-slide/CarouselSlide.componet";
 import Carousel from 'react-bootstrap/Carousel';
+import { Outlet } from "react-router-dom";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
+
 
 export function Home() {
+  
   const object = {
     method: 'GET',
     headers: {
@@ -14,7 +18,13 @@ export function Home() {
   //   .then((res) => res.json())
   //   .then((d) => console.log(d));
   // }, []);
+  
 
-
-  return <CarouselSlide />
+  return (
+    <>
+      <Outlet />
+      <h2>Feature</h2>
+      <CarouselSlide />
+    </>
+  )
 }

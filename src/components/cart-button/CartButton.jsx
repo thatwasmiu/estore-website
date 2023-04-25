@@ -12,7 +12,7 @@ const CartButton = () => {
             {cartQuantity > 0 && (
             <Button
               onClick={openCart}
-              style={{ width: "3.8rem", height: "3.8rem", position: "relative" }}
+              style={{ width: "4.2rem", height: "4.2rem", position: "relative" }}
               variant="outline-primary"
               className="rounded-circle"
             >

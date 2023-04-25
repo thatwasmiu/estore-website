@@ -1,0 +1,11 @@
+.slide-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+}
+
+.slide-img {
+    width: 55%;
+    height: 400px;
+}

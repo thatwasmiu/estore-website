@@ -1,5 +1,5 @@
 import { Col, Row } from "react-bootstrap"
-import StoreItem from "../../components/store-item/StoreItem"
+import StoreItem from "../../components/store-item/StoreItem.jsx"
 import { useQuery } from "react-query";
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";

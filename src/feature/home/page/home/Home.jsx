@@ -1,8 +1,8 @@
 import { useEffect } from "react"
-import CarouselSlide from "../../components/carousel-slide/CarouselSlide.componet";
+import CarouselSlide from "../../components/carousel-slide/CarouselSlide.componet.jsx";
 import Carousel from 'react-bootstrap/Carousel';
 import { Outlet } from "react-router-dom";
-import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { useLocalStorage } from "../../../../hooks/useLocalStorage.jsx";
 
 
 export function Home() {
@@ -18,7 +18,7 @@ export function Home() {
   //   .then((res) => res.json())
   //   .then((d) => console.log(d));
   // }, []);
-  
+
 
   return (
     <>

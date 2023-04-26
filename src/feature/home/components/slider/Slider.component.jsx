@@ -1,5 +1,5 @@
 import { Card, Carousel } from "react-bootstrap"
-import { formatCurrency } from "../../utilities/formatCurrency";
+import { formatCurrency } from "../../../../utilities/formatCurrency.js";
 import "./Slider.style.css";
 
 

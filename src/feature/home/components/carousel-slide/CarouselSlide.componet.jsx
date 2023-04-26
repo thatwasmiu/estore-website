@@ -1,8 +1,8 @@
-import Carousel from 'react-bootstrap/Carousel';
-import { CartItem } from '../cart-item/CartItem';
-import StoreItem from '../store-item/StoreItem';
-import storeItems from "../../data/items.json"
-import Slider from '../slider/Slider.component';
+ import Carousel from 'react-bootstrap/Carousel';
+import { CartItem } from '../../../../components/cart-item/CartItem.jsx';
+import StoreItem from '../../../store/components/store-item/StoreItem.jsx';
+import storeItems from "../../../../data/items.json"
+import Slider from '../slider/Slider.component.jsx';
 
 const CarouselSlide = ({ items }) => {
     

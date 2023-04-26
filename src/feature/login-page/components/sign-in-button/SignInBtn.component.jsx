@@ -1,5 +1,5 @@
 
-const SignInBtn = ({ handleClick }) => {
+const SigninBtn = ({ handleClick }) => {
     return (
         <>
             <div className="text-center">    
@@ -9,4 +9,4 @@ const SignInBtn = ({ handleClick }) => {
     )
 }
 
-export default SignInBtn;
+export default SigninBtn;

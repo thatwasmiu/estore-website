@@ -1,15 +1,14 @@
 import { Routes, Route } from "react-router-dom"
 import { Container } from "react-bootstrap"
-import { Home } from "./pages/home/Home"
-import { Store } from "./pages/store/Store"
-import { About } from "./pages/about/About"
+import { Home } from "./feature/home/page/home/Home"
+import { Store } from "./feature/store/page/store/Store"
+import { About } from "./feature/about/page/about/About"
 import { Navbar } from "./components/navbar/Navbar"
-import { QueryClientProvider, QueryClient } from "react-query"
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
-import LoginPage from "./pages/login-page/LoginPage"
-import CartButton from "./components/cart-button/CartButton"
+import LoginPage from "./feature/login-page/page/login-page/LoginPage"
 import { UserLoginContext } from "./context/UserLoginContext"
 import { useLocalStorage } from "./hooks/useLocalStorage"
+import RegisterPage from "./feature/register-page/page/RegisterPage"
 
 
 function App() {
@@ -46,6 +45,7 @@ function App() {
                   <Route path="about" element={<About />} />
                 </Route>
               <Route path="/login" element={<LoginPage />} />
+              <Route path="register" element={<RegisterPage />} />
             </Routes>
           </Container>
         </UserLoginContext.Provider>

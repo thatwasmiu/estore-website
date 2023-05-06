@@ -3,10 +3,10 @@ import { useShoppingCart } from "../../context/ShoppingCartContext"
 import { formatCurrency } from "../../utilities/formatCurrency"
 import { useAppDataContext } from "../../context/AppDataContext";
 
-export function CartItem({ id, quantity }) {
+export function CartItem({ productId, quantity }) {
   const { removeFromCart, decreaseCartQuantity, increaseCartQuantity } = useShoppingCart();
   const { products } = useAppDataContext();
-  const item = products.find(i => i.id === id)
+  const item = products.find(i => i.id === productId)
   if (item == null) return null
 
   return (
@@ -38,11 +38,11 @@ export function CartItem({ id, quantity }) {
           className="d-flex align-items-center justify-content-center"
           style={{ gap: ".5rem" }}
         >
-          <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+          <Button onClick={() => decreaseCartQuantity(productId)}>-</Button>
           <div>
             <span className="fs-3">{quantity}</span>
           </div>
-          <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+          <Button onClick={() => increaseCartQuantity(productId)}>+</Button>
         </div>
         <Button
         variant="outline-danger"

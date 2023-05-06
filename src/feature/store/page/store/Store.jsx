@@ -20,34 +20,20 @@ export function Store() {
   ); 
   
   const getSearchKeyword = (keyword) => {
-    // console.log(keyword)
+    
     setFilterKeyword(keyword);
+    setPage(1);
   }
 
-  const maxEnd = productList.length - productList.length%6;
+  const maxEnd = Math.round(productList.length/6 + 0.4);
   const end = getEndPage(page, maxEnd, productList.length);
   
 
   const changePage = (n) => {
-    console.log(n)
-    console.log(page);
-    console.log(maxEnd);
-    if (page == 1) {
-      
-      if (n == 1) {
-        setPage(page => page + 1);
-        return;
-      }
-      if (n == 2) {
-        setPage(Math.round(productList.length/6 + 0.5));
-        return;
-      }
-      
-      return;
-    }  
+    if (maxEnd == 1) return;
 
-    if (page*6 > maxEnd) {
-      
+    if (page == maxEnd) {
+  
       if (n == "-1") {
         setPage(page => page - 1);
         return;
@@ -58,6 +44,19 @@ export function Store() {
       }
       return;
     }
+
+    if (page == 1) {
+      
+      if (n == 1) {
+        setPage(page => page + 1);
+        return;
+      }
+      if (n == 2) {
+        setPage(maxEnd);
+        return;
+      }
+      return;
+    } 
 
     if (n == 1) {
       setPage(page => page + 1);
@@ -75,7 +74,6 @@ export function Store() {
       setPage(1)
       return;
     }
-      
   }
   
   return (
@@ -97,7 +95,7 @@ export function Store() {
 }
 
 function getEndPage(page, maxEnd, size) {
-  if (page * 6 <= maxEnd)
+  if (page < maxEnd)
     return (page - 1)*6 + 6;
   return size;
 }

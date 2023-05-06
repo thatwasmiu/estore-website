@@ -8,6 +8,7 @@ import { useAppDataContext } from "../../context/AppDataContext"
 export function ShoppingCart({ isOpen }) {
   const { closeCart, cartItems, handleShow } = useShoppingCart();
   const { products } = useAppDataContext();
+ 
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
       <Offcanvas.Header closeButton>
@@ -16,19 +17,20 @@ export function ShoppingCart({ isOpen }) {
       
       <Button variant="info" className="btn btn-primary btn-sm" onClick={handleShow}>Make Order!!!</Button>
       <Offcanvas.Body>
-        <Stack gap={3}>
-          {cartItems.map(item => (
-            <CartItem key={item.id} {...item} />
-          ))}
           <div className="ms-auto fw-bold fs-5">
             Total{" "}
             {formatCurrency(
               cartItems.reduce((total, cartItem) => {
-                const item = products.find(i => i.id === cartItem.id)
+                const item = products.find(i => i.id === cartItem.productId)
                 return total + (item?.price || 0) * cartItem.quantity
               }, 0)
             )}
           </div>
+        <Stack gap={3}>
+          {cartItems.map(item => (
+            <CartItem key={item.productId} {...item} />
+          ))}
+          
         </Stack>
       </Offcanvas.Body>
       

@@ -1,19 +1,23 @@
 import { useContext, useRef } from "react";
 import SigninBtn from "../sign-in-button/SigninBtn.component.jsx";
 import { UserLoginContext } from "../../../../context/UserLoginContext.jsx";
+import { useAppDataContext } from "../../../../context/AppDataContext.jsx";
+import { NavLink } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 const LoginForm = () => {
     const { authenticate } = useContext(UserLoginContext);
+    const {setProductContext, setCategoryContext} = useAppDataContext();
     const usernameRef = useRef(null);
     const passwordRef = useRef(null);
     const handleLoginSubmit = (e) => {
         e.preventDefault();
         const user = {
-            user: usernameRef.current.value, 
+            username: usernameRef.current.value, 
             password: passwordRef.current.value
         };
         
-        console.log(user)
+    
         const object = {
             method : 'POST',
             headers: {
@@ -24,7 +28,13 @@ const LoginForm = () => {
     
         fetch('http://localhost:8080/login', object)
         .then((res) => res.json())
-        .then((d) => authenticate(d));
+        .then((d) => {
+            
+            authenticate(d)
+        })
+        .catch((error) => {
+            console.log(error);
+        });
     }
         
     return (
@@ -38,6 +48,7 @@ const LoginForm = () => {
                 <label className="form-label" htmlFor="loginPassword">Password</label>
             </div>
             <SigninBtn handleClick={handleLoginSubmit} />
+            <p className="text-center">Not a member? <NavLink to="/register">Register</NavLink></p>
         </>
     )
 }

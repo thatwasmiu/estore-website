@@ -1,15 +1,16 @@
 import { Button, Stack } from "react-bootstrap"
 import { useShoppingCart } from "../../context/ShoppingCartContext"
-import storeItems from "../../data/items.json"
 import { formatCurrency } from "../../utilities/formatCurrency"
+import { useAppDataContext } from "../../context/AppDataContext";
 
 export function CartItem({ id, quantity }) {
-  const { removeFromCart } = useShoppingCart()
-  const item = storeItems.find(i => i.id === id)
+  const { removeFromCart, decreaseCartQuantity, increaseCartQuantity } = useShoppingCart();
+  const { products } = useAppDataContext();
+  const item = products.find(i => i.id === id)
   if (item == null) return null
 
   return (
-    <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+    <Stack direction="vertical" gap={2} className="d-flex align-items-center border border-primary p-1">
       <img
         src={item.imgUrl}
         style={{ width: "125px", height: "75px", objectFit: "cover" }}
@@ -28,13 +29,29 @@ export function CartItem({ id, quantity }) {
         </div>
       </div>
       <div> {formatCurrency(item.price * quantity)}</div>
-      <Button
+      
+      <div
+        className="d-flex align-items-center flex-column"
+        style={{ gap: ".5rem" }}
+      >
+        <div
+          className="d-flex align-items-center justify-content-center"
+          style={{ gap: ".5rem" }}
+        >
+          <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+          <div>
+            <span className="fs-3">{quantity}</span>
+          </div>
+          <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+        </div>
+        <Button
         variant="outline-danger"
         size="sm"
         onClick={() => removeFromCart(item.id)}
-      >
-        &times;
-      </Button>
+        >
+          &times;
+        </Button>
+      </div>
     </Stack>
   )
 }

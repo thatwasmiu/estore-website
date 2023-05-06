@@ -1,46 +1,60 @@
-import { useRef } from "react";
-import { Button, Col, Container, Dropdown, Form, Row } from "react-bootstrap";
+import { useEffect, useRef, useState } from "react";
+import { Button, Col, Container, Dropdown, Form, InputGroup, Row } from "react-bootstrap";
+import "./SearchBar.style.css"
+import { useAppDataContext } from "../../../../context/AppDataContext";
 
 
 
 const SearchBar = ({ getSearchKeyword }) => {
     const keywordRef = useRef("");
+    const selectDisplayRef = useRef("Category");
+    const { categories } = useAppDataContext();
 
     const onSearchBtnClick = () => {
         getSearchKeyword(keywordRef.current.value);
         // console.log(keywordRef.current.value);
     }
 
-    return (
-        <Container className="mt-4 p-4">
-            <Row>
-                <Col sm={4}>
-                <Form className="d-flex">
-                    <Form.Control
-                    ref={keywordRef}
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                    />
-                    <Button onClick={onSearchBtnClick}>
-                    Search
-                    </Button>
-                </Form>
-                </Col>
+    const onSelectElement = (e) => {
+        const word = e.target.textContent;
+        if (word === "All") {
+            selectDisplayRef.current.textContent = "Category";
+            getSearchKeyword("");
+            return;
+        }
+        selectDisplayRef.current.textContent = word;
+        getSearchKeyword(selectDisplayRef.current.textContent);
+    }
 
+    return (
+        <Container className="mt-4 p-2 bg-info text-white m-1" >
+            <Row className="text-nowrap">
                 <Col className="m-s-10">
                 <Dropdown>
-                    <Dropdown.Toggle variant="white" className="border border-dark me-2" id="dropdown-basic">
-                        Catgory
+                    <Dropdown.Toggle variant="white" className="border border-dark searchbar-combobox" id="dropdown-basic" ref={selectDisplayRef} >
+                    Catgory
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        <Dropdown.Item onClick={onSearchBtnClick}>All</Dropdown.Item>
+                        {categories.map(item => (
+                            <Dropdown.Item key={item.id} onClick={onSelectElement}>{item.type.toUpperCase()}</Dropdown.Item>
+                        ))}
                     </Dropdown.Menu>
                 </Dropdown>
+                </Col>
+
+                <Col sm={4}>
+                    <Form className="d-flex">
+                        <Form.Control
+                        ref={keywordRef}
+                        type="search"
+                        placeholder="Product Name"
+                        className="me-2"
+                        aria-label="Search"
+                        onChange={onSearchBtnClick}
+                        />
+                    </Form>
                 </Col>
             </Row>
         </Container>

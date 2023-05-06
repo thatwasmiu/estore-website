@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Corsair K100 RGB Optical switch (OPX-RF) (CH-912A01A-NA) Keyboard",
+    "imgUrl": "/imgs/keyboardcorsair.jpg",
+    "categoryId": 1,
+    "description": "- Ultra-Thin/- Low-Latency Bluetooth/- Cherry MX Ultra Low Profile Keyswitches",
+    "price": "229"
+  },
+  {
+    "name": "Steelseries Apex Pro Mini US 64820 Keyboard",
+    "imgUrl": "/imgs/keyboardsteelseries.jpg",
+    "categoryId": 1,
+    "description": "- Adjustable Actuation Switches/- World's Fastest Mechanical Keyboard/- OLED Smart Display",
+    "price": "149"
+  },
+  {
+    "name": "Logitech G913 TKL Lightspeed Wireless RGB Blue Clicky switch Keyboard",
+    "imgUrl": "/imgs/keyboardlogitech.jpg",
+    "categoryId": 1,
+    "description": "- Unifying Wireless Technology",
+    "price": "119"
+  },
+  {
+    "name": "Razer Ornata V3-Low Profile (USB/RGB) (RZ03-04460100-R3M1) Gaming Keyboard",
+    "imgUrl": "/imgs/keyboardrazer.jpg",
+    "categoryId": 1,
+    "description": "- Hybrid Mechanical Key Switches/- Detachable Plush Wrist Rest/- Programmable Macro Functionality",
+    "price": "99"
+  },
+  {
+    "name": "Fuhlen T87S Pro Wireless White Red Switch",
+    "imgUrl": "/imgs/keyboardfuhlen.jpg",
+    "categoryId": 1,
+    "description": "- Backlit Low Profile Keys/- Wireless Rechargeable Programmable Keyboard",
+    "price": "79"
+  },
+  {
+    "name": "ASUS ROG Strix Flare II Animate 100% RGB Gaming Keyboard",
+    "imgUrl": "/imgs/keyboardasus.jpg",
+    "categoryId": 1,
+    "description": "- Hot-swappable, ROG NX Brown Tactile Switches/- Acoustic Dampening Foam/- Media Controls",
+    "price": "213"
+  },
+  {
+    "name": "LEOPOLD FC750R BlueTooth PD Grey/Blue",
+    "imgUrl": "/imgs/keyboardleopold.jpg",
+    "categoryId": 1,
+    "description": "- 87Key/- High-end Mechanical/- Bluetooth Keyboard",
+    "price": "129"
+  },
+  {
+    "name": "FL-Esport FL750 SAM Marshmallow RGB Gasket Mount Kailh BOX V2 Red sw",
+    "imgUrl": "/imgs/keyboardflesport.jpg",
+    "categoryId": 1,
+    "description": "- USB/- Bluetooth/- 3Mode/- Hotswap",
+    "price": "229"
+  },
+  {
+    "name": "Dareu A98 PRO Tri Mode RED WAVE",
+    "imgUrl": "/imgs/keyboarddareu.jpg",
+    "categoryId": 1,
+    "description": "- Statellite shaft structure/- Working mode: wired USB-TypeC/Bluetooth 5.1/2.4G/- 4000mAh lithium battery",
+    "price": "169"
+  },
+  {
+    "name": "Edra EK368L Beta Wireless Gaming Keyboard",
+    "imgUrl": "/imgs/keyboardedra.jpg",
+    "categoryId": 1,
+    "description": "- Wireless 2.4G + Bluetooth (BT5.0)/- ABS Keycaps",
+    "price": "25"
+  },
+  {
+    "name": "Logitech G502 HERO High Performance Wired Gaming Mouse",
+    "imgUrl": "/imgs/mouselogitech.jpg",
+    "categoryId": 2,
+    "description": "- 25,600 DPI/- Adjustable Weights/- 11 Programmable Buttons",
+    "price": "50"
+  },
+  {
+    "name": "Razer DeathAdder Essential Gaming Mouse",
+    "imgUrl": "/imgs/mouserazer.jpg",
+    "categoryId": 2,
+    "description": "- 6400 DPI Optical Sensor/- 6400 DPI Optical Sensor/- Rubber Side Grips ",
+    "price": "29"
+  },
+  {
+    "name": "Corsair Scimitar Wireless Gaming Mouse",
+    "imgUrl": "/imgs/mousecorsair.jpg",
+    "categoryId": 2,
+    "description": "- Backlit RGB LED/- 18000 DPI/- Optical",
+    "price": "69"
+  },
+  {
+    "name": "SteelSeries Rival 3 Wireless Gaming Mouse",
+    "imgUrl": "/imgs/mousesteelseries.jpg",
+    "categoryId": 2,
+    "description": "- 400+ Hour Battery Life/- 60 Million Clicks/- 18,000 CPI TrueMove Air Optical Sensor",
+    "price": "36"
+  },
+  {
+    "name": "ASUS ROG Chakram X Gaming Mouse",
+    "imgUrl": "/imgs/mouseasus.jpg",
+    "categoryId": 2,
+    "description": "- Tri-mode Connectivity (2.4GHz RF, Bluetooth, Wired)/- 36000 DPI Sensor/- Detachable Joystick",
+    "price": "148"
+  },
+  {
+    "name": "HyperX Pulsefire Haste - Gaming Mouse",
+    "imgUrl": "/imgs/mousehyperx.jpg",
+    "categoryId": 2,
+    "description": "- Ultra-Lightweight 59g/- Honeycomb Shell/- Up to 16000 DPI",
+    "price": "40"
+  },
+  {
+    "name": "Rapoo VT200 Wireless Gaming Mouse",
+    "imgUrl": "/imgs/mouserapoo.jpg",
+    "categoryId": 2,
+    "description": "- 19,000 DPI/- 2.4GHz and Bluetooth/- RGB Lighting and MasterPlus+ Software",
+    "price": "69"
+  },
+  {
+    "name": "DAREU Wired Gaming Mouse",
+    "imgUrl": "/imgs/mousedareu.jpg",
+    "categoryId": 2,
+    "description": "- 65g Lightweight Design/- 12,000 DPI Optical Sensor/- 6 Programmable Buttons",
+    "price": "15"
+  },
+  {
+    "name": "Lecoo MS108 Gaming Mouse",
+    "imgUrl": "/imgs/mouselecoo.jpg",
+    "categoryId": 2,
+    "description": "- 12800DPI Optical Sensor/- 6 Programmable Buttons/- Customizable RGB Honeycomb Mouse",
+    "price": "30"
+  },
+  {
+    "name": "BenQ EC2-C Mouse",
+    "imgUrl": "/imgs/mousezowie.jpg",
+    "categoryId": 2,
+    "description": "- 3360 Sensor/- Ideal for Right-Handed/- 3200 DPI",
+    "price": "107"
+  },
+  {
+    "name": "Razer Leviathan V2: Multi-Driver PC Gaming Soundbar with Subwoofer",
+    "imgUrl": "/imgs/speakersrazer.jpg",
+    "categoryId": 3,
+    "description": "- THX Spatial Audio/- Compact Design/- Bluetooth 5.2 for PC, Smartphones, Tablets & Nintendo Switch",
+    "price": "249"
+  },
+  {
+    "name": "Logitech Z130 PC Speakers",
+    "imgUrl": "/imgs/speakerslogitech.png",
+    "categoryId": 3,
+    "description": "- Full Stereo Sound/- Strong Bass/- Strong Bass",
+    "price": "19"
+  },
+  {
+    "name": "Anker Soundcore Pro - A3142",
+    "imgUrl": "/imgs/speakersankere.jpg",
+    "categoryId": 3,
+    "description": "- 3.5mm AUX & PC Input",
+    "price": "149"
+  },
+  {
+    "name": "Denon Home 250",
+    "imgUrl": "/imgs/speakersdenon.jpg",
+    "categoryId": 3,
+    "description": "- 2.0 Multimedia Speaker System/- BasXPort Technology",
+    "price": "99"
+  },
+  {
+    "name": "Microlab TMN9-BT (TMN9BT)",
+    "imgUrl": "/imgs/speakersmicrolab.jpg",
+    "categoryId": 3,
+    "description": "- Premium Drivers and Build/- Advanced Wired Connectivity",
+    "price": "79"
+  },
+  {
+    "name": "HiVi Swan D1100",
+    "imgUrl": "/imgs/speakershivi.jpg",
+    "categoryId": 3,
+    "description": "- 3/4 Silk Dome Tweeter/- Class D Amplifier/- Built-in USB DAC",
+    "price": "229"
+  },
+  {
+    "name": "Homesound TH-111 2.0",
+    "imgUrl": "/imgs/speakershomesound.jpg",
+    "categoryId": 3,
+    "description": "- High-Performance USB-powered (5V)/- Simple USB plug-and-play setup (no drivers needed)",
+    "price": "17"
+  },
+  {
+    "name": "Edifier R1080BT",
+    "imgUrl": "/imgs/speakersedifier.png",
+    "categoryId": 3,
+    "description": "- 3.5mm Audio/- Magnetically shielded/- Headphone output jack",
+    "price": "80"
+  },
+  {
+    "name": "Genius SP-HF160 - 2.0",
+    "imgUrl": "/imgs/speakersgenius.png",
+    "categoryId": 3,
+    "description": "- Volume Control/- 3.5 mm Aux Audio Plug",
+    "price": "13"
+  },
+  {
+    "name": "Klipsch ProMedia Heritage - 2.1",
+    "imgUrl": "/imgs/speakersklipsch.jpg",
+    "categoryId": 3,
+    "description": "- Powerful Bass/- Effortless Mounting Swivel Brackets/- All Weather Resistance",
+    "price": "49"
+  },
+  {
+    "name": "Kingston FURY Beast RGB",
+    "imgUrl": "/imgs/ramkingston.jpg",
+    "categoryId": 4,
+    "description": "- 32GB 2666MT/- DDR4 CL16 Desktop Memory Single Module/- DDR4 CL16 Desktop Memory Single Module",
+    "price": "74"
+  },
+  {
+    "name": "Corsair Vengeance LPX",
+    "imgUrl": "/imgs/ramcorsair.jpg",
+    "categoryId": 4,
+    "description": "- 32GB (2X16GB)/- DDR4 3200 (PC4-25600) C16 1.35V Desktop Memory",
+    "price": "64"
+  },
+  {
+    "name": "Lexar Hades RGB",
+    "imgUrl": "/imgs/ramlexar.jpg",
+    "categoryId": 4,
+    "description": "- 32GB (2x16GB)/- DDR4 RAM 3600MHz CL18 Desktop Memory",
+    "price": "74"
+  },
+  {
+    "name": "Kingfast (KF1600DDAD3-8GB)",
+    "imgUrl": "/imgs/ramkingfast.jpg",
+    "categoryId": 4,
+    "description": "- 8GB/- DDR3/- 1600Mhz",
+    "price": "160"
+  },
+  {
+    "name": "G.Skill Ripjaws X Series 16 GB",
+    "imgUrl": "/imgs/ramgskill.jpeg",
+    "categoryId": 4,
+    "description": "- 2 x 8 GB/- 240-Pin SDRAM (PC3-12800) DDR3/- 1600 MHz",
+    "price": "56"
+  },
+  {
+    "name": "Klevv CRAS X RGB (KD4AGU880-32A160X)",
+    "imgUrl": "/imgs/ramklevv.jpg",
+    "categoryId": 4,
+    "description": "- DDR4/- 3200Mhz/- 32GB (2x16GB)",
+    "price": "130"
+  },
+  {
+    "name": "TEAMGROUP VULCAN (FLRD532G5200HC40CDC01)",
+    "imgUrl": "/imgs/ramteamgroup.jpg",
+    "categoryId": 4,
+    "description": "- DDR5/- 64GB (2 x 32GB)/- 5200MHz",
+    "price": "154"
+  },
+  {
+    "name": "Adata (AX5U5200C3816G-DCLABK)",
+    "imgUrl": "/imgs/ramadata.jpg",
+    "categoryId": 4,
+    "description": "- DDR5/- 32GB (2x16GB) UDIMM Memory Kit/- 5200Mhz",
+    "price": "145"
+  },
+  {
+    "name": "Gigabyte AORUS (GP-ARS32G52D5)",
+    "imgUrl": "/imgs/ramgigabyte.jpg",
+    "categoryId": 4,
+    "description": "- 32GB (2x16GB)/- DDR5/- 5200Mhz",
+    "price": "195"
+  },
+  {
+    "name": "Kingmax Zeus Dragon Red (KM-LD4-2666-16GH)",
+    "imgUrl": "/imgs/ramkingmax.jpg",
+    "categoryId": 4,
+    "description": "- 16GB (1x16GB)/- DDR4/- 2666Mhz",
+    "price": "55"
+  },
+  {
+    "name": "CPU AMD Ryzen 7 7700X",
+    "imgUrl": "/imgs/amdcpu1.jpg",
+    "categoryId": 5,
+    "description": "- 4.5 GHz Upto 5.4GHz/- 40MB/- 8 Cores, 16 Threads/- 105W/- Socket AM5",
+    "price": "404"
+  },
+  {
+    "name": "CPU AMD Ryzen 9 7950X",
+    "imgUrl": "/imgs/amdcpu2.jpg",
+    "categoryId": 5,
+    "description": "- 4.5 GHz Upto 5.7GHz/- 81MB/- 16 Cores, 32 Threads/- 170W/- Socket AM5",
+    "price": "698"
+  },
+  {
+    "name": "CPU AMD Ryzen 5 4600G",
+    "imgUrl": "/imgs/amdcpu3.jpg",
+    "categoryId": 5,
+    "description": "- 3.7 GHz turbo upto 4.2GHz/- 11MB/- 6 Cores, 12 Threads/- 65W/- Socket AM4",
+    "price": "127"
+  },
+  {
+    "name": "CPU AMD Ryzen 7 7800X3D",
+    "imgUrl": "/imgs/amdcpu4.jpg",
+    "categoryId": 5,
+    "description": "- 4.2Ghz up to 5.0Ghz/- 105MB/- 8 cores 16 threads/- 120W/- Socket AM5",
+    "price": "506"
+  },
+  {
+    "name": "CPU AMD Ryzen 5 7600X",
+    "imgUrl": "/imgs/amdcpu5.jpg",
+    "categoryId": 5,
+    "description": "- 4.7 GHz Upto 5.3GHz/- 38MB/- 6 Cores, 12 Threads/- 105W/- Socket AM5",
+    "price": "289"
+  },
+  {
+    "name": "CPU Intel Core i5-11600 - Socket Intel LGA 1200",
+    "imgUrl": "/imgs/intelcpu1.jpg",
+    "categoryId": 5,
+    "description": "- 2.8GHz turbo up to 4.8Ghz/- 6 cores 12 threads/- 12MB Cache/- 65W",
+    "price": "229"
+  },
+  {
+    "name": "CPU Intel Core i9-13900K - Socket Intel LGA 1700/Raptor Lake",
+    "imgUrl": "/imgs/intelcpu2.jpg",
+    "categoryId": 5,
+    "description": "- 3.0GHz turbo up to 5.8Ghz/- 24 cores 32 threads/- 32MB Cache/- 125W)",
+    "price": "707"
+  },
+  {
+    "name": "CPU Intel Core i7-13700K - Socket Intel LGA 1700/Raptor Lake",
+    "imgUrl": "/imgs/intelcpu3.jpg",
+    "categoryId": 5,
+    "description": "- 3.4GHz turbo up to 5.4Ghz/- 16 cores 24 threads/- 24MB Cache/- 125W",
+    "price": "477"
+  },
+  {
+    "name": "CPU Intel Core i7-10700 - Socket Intel LGA 1200",
+    "imgUrl": "/imgs/intelcpu4.jpg",
+    "categoryId": 5,
+    "description": "- 2.9GHz turbo up to 4.8GHz/- 8 cores 16 threads/- 16MB Cache/- 65W",
+    "price": "281"
+  },
+  {
+    "name": "CPU Intel Pentium Gold G6405 - Socket Intel LGA 1200",
+    "imgUrl": "/imgs/intelcpu5.jpg",
+    "categoryId": 5,
+    "description": "- 4.1GHz/- 2 cores 4 threads/- 4MB Cache/- 58W",
+    "price": "68"
+  }
+]

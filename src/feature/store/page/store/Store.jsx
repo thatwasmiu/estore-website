@@ -1,58 +1,103 @@
-import { Col, Row } from "react-bootstrap"
+import { Col, Container, Row } from "react-bootstrap"
 import StoreItem from "../../components/store-item/StoreItem.jsx"
-import { useQuery } from "react-query";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Outlet } from "react-router-dom";
+import { useAppDataContext } from "../../../../context/AppDataContext.jsx";
 import SearchBar from "../../components/search-bar/SearchBar.component.jsx";
+import Footer from "../../../../components/footer/Footer.component.jsx";
+import PaginationComponent from "../../components/Pagination/Pagination.component.jsx";
 // import storeItems from "../data/items.json"
 
 export function Store() {
 
-  // const { isLoading, error, data } = useQuery('CartItemKey', () =>
-  //   fetch('./items.json').then(res => {
-  //     console.log('test')
-  //     return res.json()
-  //   }
-      
-  //   )
-  // );
-
-  // console.log(data);
-
-  // if (isLoading) return 'Loading.................';
-
-  const [storeItems, setCategories] = useState([]);
-  useEffect(() => {
-    fetch('./items.json')
-    .then((res) => res.json())
-    .then((d) => setCategories(d));
-  }, []);
-
+  const [filterKeyword, setFilterKeyword] = useState("");
+  const [page, setPage] = useState(1);
+  const { products } = useAppDataContext();
+  
+  let productList = products.filter(
+    item => 
+    item.name.toLocaleLowerCase().includes(filterKeyword.toLocaleLowerCase() )
+  ); 
+  
   const getSearchKeyword = (keyword) => {
-    let data = [];
-    // fetch('./items.json')
-    // .then((res) => res.json())
-    // .then((d) => {
-    //   d.filter(d1 => d1.includes(keyword));
-      
-    // });
+    // console.log(keyword)
+    setFilterKeyword(keyword);
   }
 
-  // const storeItems = data;
+  const maxEnd = productList.length - productList.length%6;
+  const end = getEndPage(page, maxEnd, productList.length);
+  
+
+  const changePage = (n) => {
+    console.log(n)
+    console.log(page);
+    console.log(maxEnd);
+    if (page == 1) {
+      
+      if (n == 1) {
+        setPage(page => page + 1);
+        return;
+      }
+      if (n == 2) {
+        setPage(Math.round(productList.length/6 + 0.5));
+        return;
+      }
+      
+      return;
+    }  
+
+    if (page*6 > maxEnd) {
+      
+      if (n == "-1") {
+        setPage(page => page - 1);
+        return;
+      }
+      if (n == "-2") {
+        setPage(1)
+        return;
+      }
+      return;
+    }
+
+    if (n == 1) {
+      setPage(page => page + 1);
+      return;
+    }
+    if (n == 2) {
+      setPage(Math.round(productList.length/6 + 0.5));
+      return;
+    }
+    if (n == "-1") {
+      setPage(page => page - 1);
+      return;
+    }
+    if (n == "-2") {
+      setPage(1)
+      return;
+    }
+      
+  }
+  
   return (
     <>
       <Outlet/>
       <h1>Store</h1>
-      <SearchBar />
+      <SearchBar getSearchKeyword={getSearchKeyword}/>
       <Row md={2} xs={1} lg={3} className="g-3">
-        {storeItems.map(item => (
+        {productList.slice((page - 1)*6, end).map(item => (
           <Col key={item.id}>
             <StoreItem {...item} />
           </Col>
         ))}
       </Row>
+      <PaginationComponent page={page} changePage={changePage}/>
+      
     </>
   )
 }
 
-
+function getEndPage(page, maxEnd, size) {
+  if (page * 6 <= maxEnd)
+    return (page - 1)*6 + 6;
+  return size;
+}

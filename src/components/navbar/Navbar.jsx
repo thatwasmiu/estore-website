@@ -1,15 +1,40 @@
 import { Button, Container, Nav, NavDropdown, Navbar as NavbarBs } from "react-bootstrap"
 import { NavLink, Outlet } from "react-router-dom"
 import { useShoppingCart } from "../../context/ShoppingCartContext"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import NavDropdownMenu from "../nav-dropdown/NavDropdown.component"
 import CartButton from "../cart-button/CartButton"
 import { UserLoginContext } from "../../context/UserLoginContext"
+import { useAppDataContext } from "../../context/AppDataContext"
 
 export function Navbar() {
-  // const { openCart, cartQuantity } = useShoppingCart()
   const [expanded, setExpanded] = useState(false);
   const { authUser } = useContext(UserLoginContext);
+  const { setProductContext, setCategoryContext } = useAppDataContext();
+
+  useEffect(() => {
+
+    const object = {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
+      }
+    }
+
+
+    fetch('http://localhost:8080/api/v1/products', object)
+    .then((res) => res.json())
+    .then((d) => {
+      setProductContext(d);
+    });
+
+    fetch('http://localhost:8080/api/v1/categories', object)
+    .then((res) => res.json())
+    .then((d) => {
+      setCategoryContext(d);
+    });
+  
+  }, []) 
   
     const setToggle = () => {
         console.log('toggle');
@@ -39,7 +64,7 @@ export function Navbar() {
           </Nav.Link>
         </Nav>
     
-        <NavDropdownMenu expanded={expanded} />
+        <NavDropdownMenu/>
 
       </Container>
     </NavbarBs>

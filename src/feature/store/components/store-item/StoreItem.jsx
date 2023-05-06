@@ -13,7 +13,7 @@ const StoreItem = ({ id, name, price, imgUrl }) => {
   const quantity = getItemQuantity(id)
 
   return (
-    <Card className="h-100">
+    <Card className="h-100 border border-warning rounded p-t-2">
       <Card.Img
         variant="top"
         src={imgUrl}
@@ -21,8 +21,8 @@ const StoreItem = ({ id, name, price, imgUrl }) => {
         style={{ objectFit: "cover" }}
       />
       <Card.Body className="d-flex flex-column">
-        <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
-          <span className="fs-2">{name}</span>
+        <Card.Title className="d-flex justify-content-between align-items-baseline mb-2">
+          <span className="fs-6">{name}</span>
           <span className="ms-2 text-muted">{formatCurrency(price)}</span>
         </Card.Title>
         <div className="mt-auto">

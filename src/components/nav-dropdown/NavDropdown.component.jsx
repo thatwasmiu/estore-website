@@ -5,24 +5,22 @@ import { UserLoginContext } from "../../context/UserLoginContext";
 
 const NavDropdownMenu = (expanded) => {
 
-    const { logout } = useContext(UserLoginContext);
-    
+    const { authUser, logout } = useContext(UserLoginContext);
+    const username = authUser.user.username;
     return (
             <>
-                <div className="nav-dropdown-menu">
-                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ml-auto">
-                            {expanded && <NavDropdown className="dropdown-menu-cust">
-                                <NavDropdown.Item>Profile</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item onClick={logout}>Log out</NavDropdown.Item>
-                            </NavDropdown>}
-                        </Nav>
-                        <i className="fa-solid fa-user"></i>
-                        
-                    </Navbar.Collapse>    
-                </div> 
+                
+                {/* <div className="nav-dropdown-menu"> */}
+                <NavDropdown  drop="start">
+                    
+                        <NavDropdown.Item>
+                            {username.toUpperCase()}
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item onClick={logout}>Log out</NavDropdown.Item>   
+                </NavDropdown> 
+                <i className="fa-solid fa-user" htmlFor="dropdown-button-drop-start"></i>   
+                
             </>
     )
 }

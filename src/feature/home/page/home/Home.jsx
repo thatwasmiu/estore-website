@@ -1,30 +1,40 @@
-import { useEffect } from "react"
+
 import CarouselSlide from "../../components/carousel-slide/CarouselSlide.componet.jsx";
-import Carousel from 'react-bootstrap/Carousel';
 import { Outlet } from "react-router-dom";
-import { useLocalStorage } from "../../../../hooks/useLocalStorage.jsx";
+import { Col, Image, Row } from "react-bootstrap";
+import HardCard from "../../components/hard-card/HardCard.component.jsx";
 
 
 export function Home() {
   
-  const object = {
-    method: 'GET',
-    headers: {
-      'Authorization': `Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4MjMyMTg2Nn0.oyu-eXIxqcivJGchDWs_uZxuhKXnRGVYAGdLeMvbXfU`, // notice the Bearer before your token
-    },
-  }
-  // useEffect(() => {
-  //   fetch('http://localhost:8080/api/v1/products', object)
-  //   .then((res) => res.json())
-  //   .then((d) => console.log(d));
-  // }, []);
-
 
   return (
     <>
       <Outlet />
-      <h2>Feature</h2>
+      <h1>Feature</h1>
       <CarouselSlide />
+      <br></br>
+      <h1 className="text-danger">Shopping Now!!</h1>
+      <Row>
+        <Col>
+          <HardCard imgUrl="/imgs/keyboards.jpeg" text="KEYBOARD"/>
+        </Col>
+        <Col>
+          <HardCard imgUrl="/imgs/mouses.jpg" text="MOUSE"/>
+        </Col>
+        <Col>
+          <HardCard imgUrl="/imgs/speakers.jpg" text="SPEAKER"/>
+        </Col>
+      </Row>
+      <br></br>
+      <Row>
+        <Col>
+          <HardCard imgUrl="/imgs/ram.jpg" text="RAM"/>
+        </Col>
+        <Col>
+          <HardCard imgUrl="/imgs/cpu.jpg" text="CPU"/>
+        </Col>
+      </Row>
     </>
   )
 }

@@ -2,4 +2,7 @@
     position: fixed;
     right: 25px;
     bottom: 70px;
+    z-index: 1;
+    background-color: #42c2f5;
+    border-radius: 50%;
 }

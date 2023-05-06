@@ -12,8 +12,8 @@ const Slider = ({ name, price, imgUrl }) => {
             />
         </div>
         <Carousel.Caption className="slide-caption">
-            <h3 className="fs-2">{name}</h3>
-            <span className="ms-2 text-muted">{formatCurrency(price)}</span>
+            <h5 className="fs-2 text-secondary">{name}</h5>
+            <h6 className="ms-2 text-muted">{formatCurrency(price)}</h6>
         </Carousel.Caption>
     </div>
   )

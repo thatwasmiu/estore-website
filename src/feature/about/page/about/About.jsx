@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import "./About.style.css"
 import { Col, Image, Row } from "react-bootstrap";
+import Footer from "../../../../components/footer/Footer.component";
 
 export function About() {
   return <>
@@ -14,6 +15,6 @@ export function About() {
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, odio in. Nulla sunt blanditiis quod ratione labore dolorum, distinctio possimus consequatur magni non et earum, deserunt praesentium? Quos, molestiae illo?
       </Col>
     </Row>
-    
+    <Footer />
   </>
 }

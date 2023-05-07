@@ -12,7 +12,7 @@ const RegisterForm = () => {
         e.preventDefault();
         const user = {
             email: emailRef.current.value,
-            user: usernameRef.current.value, 
+            username: usernameRef.current.value, 
             password: passwordRef.current.value,
         };
         console.log(user);

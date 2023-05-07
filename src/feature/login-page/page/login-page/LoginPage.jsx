@@ -2,20 +2,30 @@ import { useContext } from 'react';
 import LoginForm from '../../components/login-form/LoginForm.component.jsx';
 import { UserLoginContext } from '../../../../context/UserLoginContext.jsx';
 import './LoginPage.style.css';
+import Footer from '../../../../components/footer/Footer.component.jsx';
 
 const LoginPage = () => {
-    const { authUser, authenticate } = useContext(UserLoginContext);
+    const { authUser, authenticate, logout } = useContext(UserLoginContext);
     if (authUser.user !== null) {
-        const url = "/";
-        window.location.replace(url);
-        return;
+        if (authUser.user.role == "CUSTOMER") {
+            window.location.replace("/");
+            return;
+        }
+        if (authUser.user.role == "ADMIN") {
+            window.location.replace("/admin");
+            return;
+        }
+        logout();
     }
     return (  
+        <>
         <div className='container'>
             <form className="body_LoginPage">  
                 <LoginForm/>
             </form>
         </div>  
+        <Footer />
+        </>
     )
 }
 

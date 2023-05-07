@@ -69,6 +69,10 @@ export function ShoppingCartProvider({ children }) {
     })
   }
 
+  function resetCart() {
+    setCartItems([]);
+  }
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -83,6 +87,7 @@ export function ShoppingCartProvider({ children }) {
         removeFromCart,
         openCart,
         closeCart,
+        resetCart,
         cartItems,
         cartQuantity,
         handleShow,

@@ -5,7 +5,6 @@ import { useAppDataContext } from '../../../../context/AppDataContext.jsx';
 
 const CarouselSlide = ({ items }) => {
     const { products } = useAppDataContext();
-
     const featureProducts = products.sort(() => .5 - Math.random()).slice(0,4)
     return (
         <Carousel>

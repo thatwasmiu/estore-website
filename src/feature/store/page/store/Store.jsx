@@ -89,7 +89,7 @@ export function Store() {
         ))}
       </Row>
       <PaginationComponent page={page} changePage={changePage}/>
-      
+      <Footer />
     </>
   )
 }

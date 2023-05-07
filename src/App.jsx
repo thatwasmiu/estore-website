@@ -11,6 +11,7 @@ import { useLocalStorage } from "./hooks/useLocalStorage"
 import RegisterPage from "./feature/register-page/page/RegisterPage"
 import { AppDataContextProvider } from "./context/AppDataContext"
 import Footer from "./components/footer/Footer.component"
+import AdminDashboard from "./feature/admin-dashboard/pages/AdminDashboard"
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
       <UserLoginContext.Provider value={{ authUser, authenticate, logout }}>
         <AppDataContextProvider>
           <ShoppingCartProvider >
-            <Container className="mb-4">
+            <Container className="mb-4" >
               <Routes>
                   <Route path="/" element={<Navbar />}> 
                     <Route path="" element={<Home />} />
@@ -51,10 +52,14 @@ function App() {
                   </Route>
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />
+                
               </Routes>
             </Container>
           </ShoppingCartProvider>
-          <Footer />
+          
+          <Routes>
+            <Route path="/admin/*" element={<AdminDashboard />} />
+          </Routes>
         </AppDataContextProvider>
       </UserLoginContext.Provider>  
       </>

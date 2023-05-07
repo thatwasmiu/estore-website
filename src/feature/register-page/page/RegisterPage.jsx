@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import RegisterForm from "../components/RegisterForm";
 import { UserLoginContext } from "../../../context/UserLoginContext";
+import Footer from "../../../components/footer/Footer.component";
 
 
 const RegisterPage = () => {
@@ -11,11 +12,15 @@ const RegisterPage = () => {
         return;
     }
     return (  
+        <>
         <div className='container'>
             <form className="body_LoginPage">  
                 <RegisterForm />
             </form>
-        </div>  
+        </div> 
+
+        <Footer />
+        </> 
     )
 }
 

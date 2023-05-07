@@ -3,7 +3,7 @@ import { Button, Dropdown, Modal } from "react-bootstrap"
 import { useAppDataContext } from "../../context/AppDataContext";
 import { formatCurrency } from "../../utilities/formatCurrency";
 import { UserLoginContext } from "../../context/UserLoginContext";
-
+let order = {};
 
 const CheckoutModal = ({ handleClose, items, totalPrice }) => {
     const [vouchers, setVoucherData] = useState([]);
@@ -12,12 +12,7 @@ const CheckoutModal = ({ handleClose, items, totalPrice }) => {
     const [displayPrice, setDisplayPrice] = useState(totalPrice); 
     const [isDiscounted, setDiscountedStatus] = useState(false);
     const titleRef = useRef("");
-    const order = {
-        customerId: authUser.user.id,
-        voucherId: null,
-        products: items,
-        orderPrice: displayPrice
-    };
+    
     // const [n, setN] = useState(-1)
     // const voucherDisplay = vouchers.slice().splice(n, 1);
     useEffect(() => {
@@ -29,15 +24,22 @@ const CheckoutModal = ({ handleClose, items, totalPrice }) => {
           }
       
         fetch('http://localhost:8080/api/v1/vouchers', object)
-        .then((res) => res.json())
-        .then((d) => {
-        setVoucherData(d);
-        });
+        .then((res) => 
+            setVoucherData(d)
+        );
+
+        order = {
+            customerId: authUser.user.id,
+            voucherId: null,
+            products: items,
+            orderPrice: displayPrice
+        }
     }, [])
 
     const applyVoucher = (e) => {
         const percentage = e.currentTarget.getAttribute('value');
         order.voucherId = e.currentTarget.getAttribute('v-id');
+        console.log(order.voucherId)
         e.currentTarget.disabled = true;
         setDisplayPrice(displayPrice => totalPrice - (displayPrice*percentage)/100);
         setDiscountedStatus(true);
@@ -54,7 +56,7 @@ const CheckoutModal = ({ handleClose, items, totalPrice }) => {
             },
             body: JSON.stringify(order)
           }
-      
+    
         fetch('http://localhost:8080/api/v1/orders', object)
         .then((res) => res.json())
         .then((d) => {

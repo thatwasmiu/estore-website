@@ -1,3 +1,6 @@
 .footer-component{
     margin-top: 300px;
+    position: absolute;  /* cling to parent */
+    left: 0;
+    right: 0;
 }

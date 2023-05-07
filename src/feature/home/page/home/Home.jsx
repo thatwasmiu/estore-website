@@ -3,6 +3,7 @@ import CarouselSlide from "../../components/carousel-slide/CarouselSlide.compone
 import { Outlet } from "react-router-dom";
 import { Col, Image, Row } from "react-bootstrap";
 import HardCard from "../../components/hard-card/HardCard.component.jsx";
+import Footer from "../../../../components/footer/Footer.component.jsx";
 
 
 export function Home() {
@@ -35,6 +36,7 @@ export function Home() {
           <HardCard imgUrl="/imgs/cpu.jpg" text="CPU"/>
         </Col>
       </Row>
+      <Footer />
     </>
   )
 }

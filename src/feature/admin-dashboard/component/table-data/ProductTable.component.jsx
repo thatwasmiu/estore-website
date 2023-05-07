@@ -1,4 +1,4 @@
-import { Button, ButtonGroup, Container, InputGroup, Modal, Table } from "react-bootstrap"
+import { Button, ButtonGroup, Col, Container, InputGroup, Modal, Row, Table } from "react-bootstrap"
 import "./TableData.style.css"
 import { useAppDataContext } from "../../../../context/AppDataContext"
 import { useContext, useEffect, useState } from "react"
@@ -95,12 +95,38 @@ const ProductTable = ({ data}) => {
 
     return (
         <Container className="table-middle">
-          // Edit modal
           <Modal show={show} onHide={handleClose} mt-2>
             <Modal.Header closeButton>
-              <Modal.Title>Input Product Detal!</Modal.Title>
+              <Modal.Title>Input Product Detail!</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>
+              <Row>
+                <Col md="auto">
+                  <label  htmlFor="1" className="mt-1 pl">Product Name </label>
+                  <br/>
+                  <label  htmlFor="2" className="mt-1">Category </label>
+                  <br/>
+                  <label  htmlFor="3" className="mt-1">Description </label>
+                  <br/>
+                  <label  htmlFor="4" className="mt-1">Price </label>
+                  <br/>
+                  <label  htmlFor="5" className="mt-1">Image Url </label>
+                </Col>
+                <Col >
+                  <input type="text" id="1" required />  
+                  <br/>
+                  <input type="text" id="2" required/>
+                  <br/>
+                  <input type="text" id="3" required/>
+                  <br/>
+                  <input type="text" id="4" required/>
+                  <br/>
+                  <input type="text" id="5" required/>
+                </Col>
+              </Row>
+                
+                
+            </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
                 Close

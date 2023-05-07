@@ -5,25 +5,24 @@ import { useAppDataContext } from "../../../../context/AppDataContext";
 
 
 
-const SearchBar = ({ getSearchKeyword }) => {
+const SearchBar = ({ getSearchKeyword, getTypeProduct }) => {
     const keywordRef = useRef("");
     const selectDisplayRef = useRef("Category");
     const { categories } = useAppDataContext();
 
     const onSearchBtnClick = () => {
         getSearchKeyword(keywordRef.current.value);
-        // console.log(keywordRef.current.value);
     }
 
     const onSelectElement = (e) => {
         const word = e.target.textContent;
         if (word === "All") {
             selectDisplayRef.current.textContent = "Category";
-            getSearchKeyword("");
+            getTypeProduct(word);
             return;
         }
         selectDisplayRef.current.textContent = word;
-        getSearchKeyword(selectDisplayRef.current.textContent);
+        getTypeProduct(selectDisplayRef.current.textContent);
     }
 
     return (
@@ -36,7 +35,7 @@ const SearchBar = ({ getSearchKeyword }) => {
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                        <Dropdown.Item onClick={onSearchBtnClick}>All</Dropdown.Item>
+                        <Dropdown.Item onClick={onSelectElement}>All</Dropdown.Item>
                         {categories.map(item => (
                             <Dropdown.Item key={item.id} onClick={onSelectElement}>{item.type.toUpperCase()}</Dropdown.Item>
                         ))}

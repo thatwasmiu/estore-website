@@ -10,7 +10,7 @@ import { UserLoginContext } from "../../../context/UserLoginContext";
 
 const AdminDashboard = () => {
       
-    const {authUser, logout } = useContext(UserLoginContext); 
+    const {authUser} = useContext(UserLoginContext); 
 
     if (authUser.user === null ) {
         const url = "/login";
@@ -31,7 +31,6 @@ const AdminDashboard = () => {
 
     return (    
         <div className="bg-secondary fixed-top">
-            <Button onClick={logout}></Button>
             <Row>
                 <Col md="auto">
                     <Sidebar />

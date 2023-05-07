@@ -24,9 +24,9 @@ const CheckoutModal = ({ handleClose, items, totalPrice }) => {
           }
       
         fetch('http://localhost:8080/api/v1/vouchers', object)
-        .then((res) => 
-            setVoucherData(d)
-        );
+        .then((res) => res.json())
+        .then(d => {setVoucherData(d);
+        });
 
         order = {
             customerId: authUser.user.id,
@@ -35,6 +35,7 @@ const CheckoutModal = ({ handleClose, items, totalPrice }) => {
             orderPrice: displayPrice
         }
     }, [])
+
 
     const applyVoucher = (e) => {
         const percentage = e.currentTarget.getAttribute('value');

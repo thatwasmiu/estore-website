@@ -10,7 +10,7 @@ import { useAppDataContext } from "../../context/AppDataContext"
 export function Navbar() {
   const [expanded, setExpanded] = useState(false);
   const { authUser } = useContext(UserLoginContext);
-  const { setProductContext, setCategoryContext } = useAppDataContext();
+  const { setProductContext, setCategoryContext, setVoucherContext } = useAppDataContext();
 
   useEffect(() => {
 
@@ -33,6 +33,14 @@ export function Navbar() {
     .then((d) => {
       setCategoryContext(d);
     });
+
+    
+
+      fetch('http://localhost:8080/api/v1/vouchers', object)
+      .then((res) => res.json())
+      .then((d) => {
+      setVoucherContext(d);
+  }, [])
   
   }, []) 
   
@@ -62,8 +70,10 @@ export function Navbar() {
           <Nav.Link to="/about" as={NavLink}>
             About
           </Nav.Link>
+          <Nav.Link to="/order" as={NavLink} className="text-info">
+          Your Orders
+          </Nav.Link>
         </Nav>
-    
         <NavDropdownMenu/>
 
       </Container>

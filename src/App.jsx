@@ -12,6 +12,7 @@ import RegisterPage from "./feature/register-page/page/RegisterPage"
 import { AppDataContextProvider } from "./context/AppDataContext"
 import Footer from "./components/footer/Footer.component"
 import AdminDashboard from "./feature/admin-dashboard/pages/AdminDashboard"
+import Order from "./feature/order-page/page/Order.component"
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
                     <Route path="" element={<Home />} />
                     <Route path="store" element={<Store />} />
                     <Route path="about" element={<About />} />
+                    <Route path="order" element={<Order />} />
                   </Route>
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/register" element={<RegisterPage />} />

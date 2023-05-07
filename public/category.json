@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "type": "keyboard"
+    },
+    {
+        "id": 2,
+        "type": "mouse"
+    },
+    {
+        "id": 3,
+        "type": "speaker"
+    },
+    {
+        "id": 4,
+        "type": "ram"
+    },
+    {
+        "id": 5,
+        "type": "cpu"
+    }
+]

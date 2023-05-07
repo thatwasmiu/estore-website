@@ -10,23 +10,31 @@ import PaginationComponent from "../../components/Pagination/Pagination.componen
 
 export function Store() {
 
-  const [filterKeyword, setFilterKeyword] = useState("");
+
   const [page, setPage] = useState(1);
-  const { products } = useAppDataContext();
-  
-  let productList = products.filter(
-    item => 
-    item.name.toLocaleLowerCase().includes(filterKeyword.toLocaleLowerCase() )
-  ); 
-  
+  const { products, categories } = useAppDataContext();
+  const [displayProduct, setDiplayProduct] = useState(products);
   const getSearchKeyword = (keyword) => {
-    
-    setFilterKeyword(keyword);
+    setDiplayProduct(products.filter(item => item.name.toLocaleLowerCase()
+                                                .includes(keyword.toLocaleLowerCase())));
     setPage(1);
   }
 
-  const maxEnd = Math.round(productList.length/6 + 0.4);
-  const end = getEndPage(page, maxEnd, productList.length);
+
+  const getTypeProduct = (type) => {
+    if (type === "All") {
+      setDiplayProduct(products);
+      setPage(1);
+      return;
+    }
+    const catgory = categories.find(c => c.type === type.toLowerCase());
+    const p = products.filter(item => item.categoryId === catgory.id);
+    setDiplayProduct(p);
+    setPage(1);
+  }
+
+  const maxEnd = Math.round(displayProduct.length/6 + 0.4);
+  const end = getEndPage(page, maxEnd, displayProduct.length);
   
 
   const changePage = (n) => {
@@ -63,7 +71,7 @@ export function Store() {
       return;
     }
     if (n == 2) {
-      setPage(Math.round(productList.length/6 + 0.5));
+      setPage(Math.round(displayProduct.length/6 + 0.5));
       return;
     }
     if (n == "-1") {
@@ -80,9 +88,9 @@ export function Store() {
     <>
       <Outlet/>
       <h1>Store</h1>
-      <SearchBar getSearchKeyword={getSearchKeyword}/>
+      <SearchBar getSearchKeyword={getSearchKeyword} getTypeProduct={getTypeProduct}/>
       <Row md={2} xs={1} lg={3} className="g-3">
-        {productList.slice((page - 1)*6, end).map(item => (
+        {displayProduct.slice((page - 1)*6, end).map(item => (
           <Col key={item.id}>
             <StoreItem {...item} />
           </Col>

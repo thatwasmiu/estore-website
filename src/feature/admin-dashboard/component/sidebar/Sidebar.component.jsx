@@ -9,9 +9,11 @@ import {
     CDBIcon
   } from 'cdbreact';
 import { NavLink } from 'react-router-dom'
+import { Button } from 'react-bootstrap';
+import { UserLoginContext } from '../../../../context/UserLoginContext';
 
 const Sidebar = () => {
-    
+    const {logout } = useContext(UserLoginContext);
     
     return (
         <>
@@ -40,7 +42,7 @@ const Sidebar = () => {
                 </CDBSidebarContent>
                 <CDBSidebarFooter style={{ textAlign: 'center' }}>
                 <div className="sidebar-btn-wrapper" style={{ padding: '20px 5px',}}>
-                    Sidebar Footer
+                    <Button variant='secondary' size='lg' onClick={logout}>Logout</Button>
                 </div>
                 </CDBSidebarFooter>
             </CDBSidebar>

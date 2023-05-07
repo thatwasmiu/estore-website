@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "10% Voucher",
+        "discountPercent": 10.0
+    },
+    {
+        "id": 2,
+        "name": "15% Voucher",
+        "discountPercent": 15.0
+    },
+    {
+        "id": 3,
+        "name": "25% Voucher",
+        "discountPercent": 25.0
+    },
+    {
+        "id": 4,
+        "name": "50% Voucher",
+        "discountPercent": 50.0
+    }
+]

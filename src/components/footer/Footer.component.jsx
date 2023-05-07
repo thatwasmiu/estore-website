@@ -11,8 +11,6 @@ const Footer = () => {
           <section className="d-flex justify-content-between p-4" style={{backgroundColor: '#6351ce'}}>
             
           </section>
-          {/* Section: Social media */}
-          {/* Section: Links  */}
           <section >
             <div className="container text-center text-md-start mt-5">
               {/* Grid row */}
@@ -20,10 +18,10 @@ const Footer = () => {
                 {/* Grid column */}
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                   {/* Content */}
-                  <h6 className="text-uppercase fw-bold">Company name</h6>
+                  <h6 className="text-uppercase fw-bold">5C20</h6>
                   <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px', backgroundColor: '#7c4dff', height: '2px'}} />
                   <p>
-                    Here you can use rows and columns to organize your footer
+                    Group project for se2 course
                   </p>
                 </div>
                 {/* Grid column */}
@@ -53,10 +51,9 @@ const Footer = () => {
                   {/* Links */}
                   <h6 className="text-uppercase fw-bold">Contact</h6>
                   <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px', backgroundColor: '#7c4dff', height: '2px'}} />
-                  <p><i className="fas fa-home mr-3" /> New York, NY 10012, US</p>
-                  <p><i className="fas fa-envelope mr-3" /> info@example.com</p>
-                  <p><i className="fas fa-phone mr-3" /> + 01 234 567 88</p>
-                  <p><i className="fas fa-print mr-3" /> + 01 234 567 89</p>
+                  <p><i className="fas fa-home mr-3" /> Hanoi University</p>
+                  <p><i className="fas fa-envelope mr-3" /> 5c20@hanu.edu.vn</p>
+                  <p><i className="fas fa-phone mr-3" /> + 8487654321</p>
                 </div>
                 {/* Grid column */}
               </div>
@@ -66,8 +63,8 @@ const Footer = () => {
           {/* Section: Links  */}
           {/* Copyright */}
           <div className="text-center p-3" style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
-            © 2020 Copyright:
-            <a className="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            © 2023 Copyright:
+            <a className="text-white" href="https://mdbootstrap.com/">5C20.hanu</a>
           </div>
           {/* Copyright */}
         </footer>

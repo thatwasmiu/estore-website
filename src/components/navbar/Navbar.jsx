@@ -22,19 +22,17 @@ export function Navbar() {
     }
 
 
-    fetch('http://localhost:8080/api/v1/products', object)
-    .then((res) => res.json())
-    .then((d) => {
-      setProductContext(d);
-    });
+      fetch('http://localhost:8080/api/v1/products', object)
+      .then((res) => res.json())
+      .then((d) => {
+        setProductContext(d);
+      });
 
-    fetch('http://localhost:8080/api/v1/categories', object)
-    .then((res) => res.json())
-    .then((d) => {
-      setCategoryContext(d);
-    });
-
-    
+      fetch('http://localhost:8080/api/v1/categories', object)
+      .then((res) => res.json())
+      .then((d) => {
+        setCategoryContext(d);
+      });
 
       fetch('http://localhost:8080/api/v1/vouchers', object)
       .then((res) => res.json())

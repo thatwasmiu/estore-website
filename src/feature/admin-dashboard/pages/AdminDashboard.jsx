@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom"
-import { Home } from "../../home/page/home/Home";
-import { Navbar } from "../../../components/navbar/Navbar";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Sidebar from "../component/sidebar/SideBar.component";
-import AppFrame from "../component/app-frame/AppFrame.component";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import TableData from "../component/table-data/ProductTable.component";
 import { UserLoginContext } from "../../../context/UserLoginContext";
+import VoucherTable from "../component/table-data/VoucherTable.component";
+import OrderTable from "../component/table-data/OrderTable.component";
+import { useAppDataContext } from "../../../context/AppDataContext";
 
 const AdminDashboard = () => {
       
@@ -24,6 +24,28 @@ const AdminDashboard = () => {
         return
     }
 
+    const { setProductContext, setVoucherContext } = useAppDataContext();
+    useEffect(() => {
+        const object = {
+            method: 'GET',
+            headers: {
+              'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
+            }
+          }
+      
+        fetch('http://localhost:8080/api/v1/products', object)
+        .then((res) => res.json())
+        .then((d) => {
+        setProductContext(d);
+        });
+
+        fetch('http://localhost:8080/api/v1/vouchers', object)
+        .then((res) => res.json())
+        .then((d) => {
+        setVoucherContext(d);
+        });
+    }, [])
+
     const [toggle, setToggle] = useState(true)    
     const Toggle = () => {        
         setToggle(!toggle)    
@@ -38,6 +60,8 @@ const AdminDashboard = () => {
                 <Col>
                     <Routes>
                         <Route path="/product" element={<TableData />}></Route>
+                        <Route path="/order" element={<OrderTable />}></Route>
+                        <Route path="voucher" element={<VoucherTable />}></Route>
                     </Routes>
                     
                 </Col>

@@ -6,22 +6,7 @@ import { UserLoginContext } from "../../../../context/UserLoginContext"
 import TablePagination from "../pagination-table/TablePagination.component"
 
 const ProductTable = ({ data}) => {
-    useEffect(() => {
-        const object = {
-            method: 'GET',
-            headers: {
-              'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
-            }
-          }
-      
-        fetch('http://localhost:8080/api/v1/products', object)
-        .then((res) => res.json())
-        .then((d) => {
-        setProductContext(d);
-        });
-    }, [])
-
-    const { authUser } = useContext(UserLoginContext);
+    
     const { products, setProductContext } = useAppDataContext();
 
     // Pagination logic

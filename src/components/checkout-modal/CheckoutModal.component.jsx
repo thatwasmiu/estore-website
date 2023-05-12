@@ -59,8 +59,7 @@ const CheckoutModal = ({ handleClose, items, totalPrice }) => {
           }
     
         fetch('http://localhost:8080/api/v1/orders', object)
-        .then((res) => res.json())
-        .then((d) => {
+        .then(res => {
             titleRef.current.textContent = "Making Order Successfully!!"
         });
 

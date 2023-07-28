@@ -9,15 +9,10 @@ const OrderTable = () =>{
     const [orders, setOrderData] = useState([]);
     const { vouchers } = useAppDataContext();
     const { authUser } = useContext(UserLoginContext);
+    console.log(orders);
     useEffect(() => {
-        const object = {
-            method: 'GET',
-            headers: {
-              'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
-            }
-          }
       
-        fetch('http://localhost:8080/api/v1/orders', object)
+        fetch('order.json')
         .then((res) => res.json())
         .then((d) => {
         setOrderData(d);
@@ -88,31 +83,6 @@ const OrderTable = () =>{
 
         const order = orders.find(item => item.id == e.currentTarget.value);
         order.status = "ACCEPTED";
-        const object = {
-            method: 'PUT',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
-            },
-            body: JSON.stringify(order)
-          }
-    
-        fetch('http://localhost:8080/api/v1/orders', object)
-        .then((res) => res.json())
-        .then((d) => {
-            const object = {
-                method: 'GET',
-                headers: {
-                  'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
-                }
-            }
-
-            fetch('http://localhost:8080/api/v1/orders', object)
-            .then((res) => res.json())
-            .then((d) => {
-                setOrderData(C => d);
-            });
-        });
     
     }
     

@@ -12,14 +12,7 @@ const Order = () => {
     const {authUser} = useContext(UserLoginContext);
     
     useEffect(() => {
-        const object = {
-            method: 'GET',
-            headers: {
-              'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
-            }
-          }
-      
-        fetch('http://localhost:8080/api/v1/orders/list', object)
+        fetch('order.json')
         .then((res) => res.json())
         .then((d) => {
         setOrderData(d);

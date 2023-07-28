@@ -4,6 +4,7 @@ import { UserLoginContext } from "../../../../context/UserLoginContext.jsx";
 import { useAppDataContext } from "../../../../context/AppDataContext.jsx";
 import { NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import { users } from "../../../../user.data.js";
 
 const LoginForm = () => {
     const { authenticate } = useContext(UserLoginContext);
@@ -18,23 +19,16 @@ const LoginForm = () => {
         };
         
     
-        const object = {
-            method : 'POST',
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        }
     
-        fetch('http://localhost:8080/login', object)
-        .then((res) => res.json())
-        .then((d) => {
+        for (const authUser of users) {
+            if (user.username == authUser.user.username && user.password == authUser.user.password) {
+                authenticate(authUser)
+                return;
+            }
+        }
             
-            authenticate(d)
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+            
+        
     }
         
     return (

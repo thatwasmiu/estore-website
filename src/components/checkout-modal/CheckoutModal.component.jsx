@@ -16,14 +16,8 @@ const CheckoutModal = ({ handleClose, items, totalPrice }) => {
     // const [n, setN] = useState(-1)
     // const voucherDisplay = vouchers.slice().splice(n, 1);
     useEffect(() => {
-        const object = {
-            method: 'GET',
-            headers: {
-              'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
-            }
-          }
       
-        fetch('http://localhost:8080/api/v1/vouchers', object)
+        fetch('vouchers.json')
         .then((res) => res.json())
         .then(d => {setVoucherData(d);
         });
@@ -47,22 +41,8 @@ const CheckoutModal = ({ handleClose, items, totalPrice }) => {
     }
 
     const makeOrder = () => {
-        console.log(JSON.stringify(order));
-
-        const object = {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
-            },
-            body: JSON.stringify(order)
-          }
-    
-        fetch('http://localhost:8080/api/v1/orders', object)
-        .then(res => {
-            titleRef.current.textContent = "Making Order Successfully!!"
-        });
-
+        
+        titleRef.current.textContent = "Making Order Successfully!!"
     }
 
     return (

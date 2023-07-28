@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Corsair K100 RGB Optical switch (OPX-RF) (CH-912A01A-NA) Keyboard",
     "imgUrl": "/imgs/keyboardcorsair.jpg",
     "categoryId": 1,
@@ -7,6 +8,7 @@
     "price": "229"
   },
   {
+    "id": 2,
     "name": "Steelseries Apex Pro Mini US 64820 Keyboard",
     "imgUrl": "/imgs/keyboardsteelseries.jpg",
     "categoryId": 1,
@@ -14,6 +16,7 @@
     "price": "149"
   },
   {
+    "id": 3,
     "name": "Logitech G913 TKL Lightspeed Wireless RGB Blue Clicky switch Keyboard",
     "imgUrl": "/imgs/keyboardlogitech.jpg",
     "categoryId": 1,
@@ -21,6 +24,7 @@
     "price": "119"
   },
   {
+    "id": 4,
     "name": "Razer Ornata V3-Low Profile (USB/RGB) (RZ03-04460100-R3M1) Gaming Keyboard",
     "imgUrl": "/imgs/keyboardrazer.jpg",
     "categoryId": 1,
@@ -28,6 +32,7 @@
     "price": "99"
   },
   {
+    "id": 5,
     "name": "Fuhlen T87S Pro Wireless White Red Switch",
     "imgUrl": "/imgs/keyboardfuhlen.jpg",
     "categoryId": 1,
@@ -35,6 +40,7 @@
     "price": "79"
   },
   {
+    "id": 6,
     "name": "ASUS ROG Strix Flare II Animate 100% RGB Gaming Keyboard",
     "imgUrl": "/imgs/keyboardasus.jpg",
     "categoryId": 1,
@@ -42,6 +48,7 @@
     "price": "213"
   },
   {
+    "id": 7,
     "name": "LEOPOLD FC750R BlueTooth PD Grey/Blue",
     "imgUrl": "/imgs/keyboardleopold.jpg",
     "categoryId": 1,
@@ -49,6 +56,7 @@
     "price": "129"
   },
   {
+    "id": 8,
     "name": "FL-Esport FL750 SAM Marshmallow RGB Gasket Mount Kailh BOX V2 Red sw",
     "imgUrl": "/imgs/keyboardflesport.jpg",
     "categoryId": 1,
@@ -56,6 +64,7 @@
     "price": "229"
   },
   {
+    "id": 9,
     "name": "Dareu A98 PRO Tri Mode RED WAVE",
     "imgUrl": "/imgs/keyboarddareu.jpg",
     "categoryId": 1,
@@ -63,6 +72,7 @@
     "price": "169"
   },
   {
+    "id": 10,
     "name": "Edra EK368L Beta Wireless Gaming Keyboard",
     "imgUrl": "/imgs/keyboardedra.jpg",
     "categoryId": 1,
@@ -70,6 +80,7 @@
     "price": "25"
   },
   {
+    "id": 11,
     "name": "Logitech G502 HERO High Performance Wired Gaming Mouse",
     "imgUrl": "/imgs/mouselogitech.jpg",
     "categoryId": 2,
@@ -77,6 +88,7 @@
     "price": "50"
   },
   {
+    "id": 12,
     "name": "Razer DeathAdder Essential Gaming Mouse",
     "imgUrl": "/imgs/mouserazer.jpg",
     "categoryId": 2,
@@ -84,6 +96,7 @@
     "price": "29"
   },
   {
+    "id": 13,
     "name": "Corsair Scimitar Wireless Gaming Mouse",
     "imgUrl": "/imgs/mousecorsair.jpg",
     "categoryId": 2,
@@ -91,6 +104,7 @@
     "price": "69"
   },
   {
+    "id": 14,
     "name": "SteelSeries Rival 3 Wireless Gaming Mouse",
     "imgUrl": "/imgs/mousesteelseries.jpg",
     "categoryId": 2,
@@ -98,6 +112,7 @@
     "price": "36"
   },
   {
+    "id": 15,
     "name": "ASUS ROG Chakram X Gaming Mouse",
     "imgUrl": "/imgs/mouseasus.jpg",
     "categoryId": 2,
@@ -105,6 +120,7 @@
     "price": "148"
   },
   {
+    "id": 16,
     "name": "HyperX Pulsefire Haste - Gaming Mouse",
     "imgUrl": "/imgs/mousehyperx.jpg",
     "categoryId": 2,
@@ -112,6 +128,7 @@
     "price": "40"
   },
   {
+    "id": 17,
     "name": "Rapoo VT200 Wireless Gaming Mouse",
     "imgUrl": "/imgs/mouserapoo.jpg",
     "categoryId": 2,
@@ -119,6 +136,7 @@
     "price": "69"
   },
   {
+    "id": 18,
     "name": "DAREU Wired Gaming Mouse",
     "imgUrl": "/imgs/mousedareu.jpg",
     "categoryId": 2,
@@ -126,6 +144,7 @@
     "price": "15"
   },
   {
+    "id": 19,
     "name": "Lecoo MS108 Gaming Mouse",
     "imgUrl": "/imgs/mouselecoo.jpg",
     "categoryId": 2,
@@ -133,6 +152,7 @@
     "price": "30"
   },
   {
+    "id": 20,
     "name": "BenQ EC2-C Mouse",
     "imgUrl": "/imgs/mousezowie.jpg",
     "categoryId": 2,
@@ -140,6 +160,7 @@
     "price": "107"
   },
   {
+    "id": 21,
     "name": "Razer Leviathan V2: Multi-Driver PC Gaming Soundbar with Subwoofer",
     "imgUrl": "/imgs/speakersrazer.jpg",
     "categoryId": 3,
@@ -147,6 +168,7 @@
     "price": "249"
   },
   {
+    "id": 22,
     "name": "Logitech Z130 PC Speakers",
     "imgUrl": "/imgs/speakerslogitech.png",
     "categoryId": 3,
@@ -154,6 +176,7 @@
     "price": "19"
   },
   {
+    "id": 23,
     "name": "Anker Soundcore Pro - A3142",
     "imgUrl": "/imgs/speakersankere.jpg",
     "categoryId": 3,
@@ -161,6 +184,7 @@
     "price": "149"
   },
   {
+    "id": 24,
     "name": "Denon Home 250",
     "imgUrl": "/imgs/speakersdenon.jpg",
     "categoryId": 3,
@@ -168,6 +192,7 @@
     "price": "99"
   },
   {
+    "id": 25,
     "name": "Microlab TMN9-BT (TMN9BT)",
     "imgUrl": "/imgs/speakersmicrolab.jpg",
     "categoryId": 3,
@@ -175,6 +200,7 @@
     "price": "79"
   },
   {
+    "id": 26,
     "name": "HiVi Swan D1100",
     "imgUrl": "/imgs/speakershivi.jpg",
     "categoryId": 3,
@@ -182,6 +208,7 @@
     "price": "229"
   },
   {
+    "id": 27,
     "name": "Homesound TH-111 2.0",
     "imgUrl": "/imgs/speakershomesound.jpg",
     "categoryId": 3,
@@ -189,6 +216,7 @@
     "price": "17"
   },
   {
+    "id": 28,
     "name": "Edifier R1080BT",
     "imgUrl": "/imgs/speakersedifier.png",
     "categoryId": 3,
@@ -196,6 +224,7 @@
     "price": "80"
   },
   {
+    "id": 29,
     "name": "Genius SP-HF160 - 2.0",
     "imgUrl": "/imgs/speakersgenius.png",
     "categoryId": 3,
@@ -203,6 +232,7 @@
     "price": "13"
   },
   {
+    "id": 30,
     "name": "Klipsch ProMedia Heritage - 2.1",
     "imgUrl": "/imgs/speakersklipsch.jpg",
     "categoryId": 3,
@@ -210,6 +240,7 @@
     "price": "49"
   },
   {
+    "id": 31,
     "name": "Kingston FURY Beast RGB",
     "imgUrl": "/imgs/ramkingston.jpg",
     "categoryId": 4,
@@ -217,6 +248,7 @@
     "price": "74"
   },
   {
+    "id": 32,
     "name": "Corsair Vengeance LPX",
     "imgUrl": "/imgs/ramcorsair.jpg",
     "categoryId": 4,
@@ -224,6 +256,7 @@
     "price": "64"
   },
   {
+    "id": 33,
     "name": "Lexar Hades RGB",
     "imgUrl": "/imgs/ramlexar.jpg",
     "categoryId": 4,
@@ -231,6 +264,7 @@
     "price": "74"
   },
   {
+    "id": 34,
     "name": "Kingfast (KF1600DDAD3-8GB)",
     "imgUrl": "/imgs/ramkingfast.jpg",
     "categoryId": 4,
@@ -238,6 +272,7 @@
     "price": "160"
   },
   {
+    "id": 35,
     "name": "G.Skill Ripjaws X Series 16 GB",
     "imgUrl": "/imgs/ramgskill.jpeg",
     "categoryId": 4,
@@ -245,6 +280,7 @@
     "price": "56"
   },
   {
+    "id": 36,
     "name": "Klevv CRAS X RGB (KD4AGU880-32A160X)",
     "imgUrl": "/imgs/ramklevv.jpg",
     "categoryId": 4,
@@ -252,6 +288,7 @@
     "price": "130"
   },
   {
+    "id": 37,
     "name": "TEAMGROUP VULCAN (FLRD532G5200HC40CDC01)",
     "imgUrl": "/imgs/ramteamgroup.jpg",
     "categoryId": 4,
@@ -259,6 +296,7 @@
     "price": "154"
   },
   {
+    "id": 38,
     "name": "Adata (AX5U5200C3816G-DCLABK)",
     "imgUrl": "/imgs/ramadata.jpg",
     "categoryId": 4,
@@ -266,6 +304,7 @@
     "price": "145"
   },
   {
+    "id": 39,
     "name": "Gigabyte AORUS (GP-ARS32G52D5)",
     "imgUrl": "/imgs/ramgigabyte.jpg",
     "categoryId": 4,
@@ -273,6 +312,7 @@
     "price": "195"
   },
   {
+    "id": 40,
     "name": "Kingmax Zeus Dragon Red (KM-LD4-2666-16GH)",
     "imgUrl": "/imgs/ramkingmax.jpg",
     "categoryId": 4,
@@ -280,6 +320,7 @@
     "price": "55"
   },
   {
+    "id": 41,
     "name": "CPU AMD Ryzen 7 7700X",
     "imgUrl": "/imgs/amdcpu1.jpg",
     "categoryId": 5,
@@ -287,6 +328,7 @@
     "price": "404"
   },
   {
+    "id": 42,
     "name": "CPU AMD Ryzen 9 7950X",
     "imgUrl": "/imgs/amdcpu2.jpg",
     "categoryId": 5,
@@ -294,6 +336,7 @@
     "price": "698"
   },
   {
+    "id": 43,
     "name": "CPU AMD Ryzen 5 4600G",
     "imgUrl": "/imgs/amdcpu3.jpg",
     "categoryId": 5,
@@ -301,6 +344,7 @@
     "price": "127"
   },
   {
+    "id": 44,
     "name": "CPU AMD Ryzen 7 7800X3D",
     "imgUrl": "/imgs/amdcpu4.jpg",
     "categoryId": 5,
@@ -308,6 +352,7 @@
     "price": "506"
   },
   {
+    "id": 45,
     "name": "CPU AMD Ryzen 5 7600X",
     "imgUrl": "/imgs/amdcpu5.jpg",
     "categoryId": 5,
@@ -315,6 +360,7 @@
     "price": "289"
   },
   {
+    "id": 46,
     "name": "CPU Intel Core i5-11600 - Socket Intel LGA 1200",
     "imgUrl": "/imgs/intelcpu1.jpg",
     "categoryId": 5,
@@ -322,6 +368,7 @@
     "price": "229"
   },
   {
+    "id": 47,
     "name": "CPU Intel Core i9-13900K - Socket Intel LGA 1700/Raptor Lake",
     "imgUrl": "/imgs/intelcpu2.jpg",
     "categoryId": 5,
@@ -329,6 +376,7 @@
     "price": "707"
   },
   {
+    "id": 48,
     "name": "CPU Intel Core i7-13700K - Socket Intel LGA 1700/Raptor Lake",
     "imgUrl": "/imgs/intelcpu3.jpg",
     "categoryId": 5,
@@ -336,6 +384,7 @@
     "price": "477"
   },
   {
+    "id": 49,
     "name": "CPU Intel Core i7-10700 - Socket Intel LGA 1200",
     "imgUrl": "/imgs/intelcpu4.jpg",
     "categoryId": 5,
@@ -343,6 +392,7 @@
     "price": "281"
   },
   {
+    "id": 50,
     "name": "CPU Intel Pentium Gold G6405 - Socket Intel LGA 1200",
     "imgUrl": "/imgs/intelcpu5.jpg",
     "categoryId": 5,

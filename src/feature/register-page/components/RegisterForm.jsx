@@ -1,6 +1,7 @@
 import { useContext, useRef } from "react";
 import SigninBtn from "../../login-page/components/sign-in-button/SigninBtn.component.jsx";
 import { UserLoginContext } from "../../../context/UserLoginContext.jsx";
+import { users } from "../../../user.data.js";
 
 const RegisterForm = () => {
     const { authenticate } = useContext(UserLoginContext);
@@ -11,24 +12,15 @@ const RegisterForm = () => {
     const handleSigninSubmit = (e) => {
         e.preventDefault();
         const user = {
-            email: emailRef.current.value,
             username: usernameRef.current.value, 
             password: passwordRef.current.value,
+            role: "CUSTOMER"
         };
         console.log(user);
         if (user.password == confirmPasswordRef.current.value) {
             
-            const object = {
-                method : 'POST',
-                headers: {
-                'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(user)
-            }
-    
-            fetch('http://localhost:8080/register', object)
-            .then((res) => res.json())
-            .then((d) => authenticate(d));
+            users.push({user});
+            authenticate({user})
         }
         
     }

@@ -26,24 +26,20 @@ const AdminDashboard = () => {
 
     const { setProductContext, setVoucherContext } = useAppDataContext();
     useEffect(() => {
-        const object = {
-            method: 'GET',
-            headers: {
-              'Authorization': `Bearer ` + authUser.token.value, // notice the Bearer before your token
-            }
-          }
       
-        fetch('http://localhost:8080/api/v1/products', object)
+        fetch('products.json')
         .then((res) => res.json())
         .then((d) => {
         setProductContext(d);
         });
 
-        fetch('http://localhost:8080/api/v1/vouchers', object)
+        fetch('vouchers.json')
         .then((res) => res.json())
         .then((d) => {
         setVoucherContext(d);
         });
+
+        
     }, [])
 
     const [toggle, setToggle] = useState(true)    
